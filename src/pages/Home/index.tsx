@@ -1,10 +1,19 @@
-import { BaseText, IntroContainer, TitleInFocus } from './styles'
+import {
+  BaseText,
+  CardsContainer,
+  HomeContainer,
+  IntroContainer,
+  SubTitle,
+  TitleInFocus,
+} from './styles'
 import coffeeImage from '../../assets/coffee.png'
 import { Items } from './components/Items'
+import { Card } from './components/Card'
+import { coffees } from '../../../coffees.json'
 
 export function Home() {
   return (
-    <section>
+    <HomeContainer>
       <IntroContainer>
         <div>
           <TitleInFocus>
@@ -21,6 +30,15 @@ export function Home() {
 
         <img src={coffeeImage} alt="" />
       </IntroContainer>
-    </section>
+
+      <SubTitle>Nossos cafés</SubTitle>
+      <div>
+        <CardsContainer>
+          {coffees.map((coffee) => {
+            return <Card key={coffee.id} coffee={coffee} />
+          })}
+        </CardsContainer>
+      </div>
+    </HomeContainer>
   )
 }

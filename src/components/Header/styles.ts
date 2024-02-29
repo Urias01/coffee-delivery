@@ -3,6 +3,11 @@ import styled from 'styled-components'
 export const HeaderContainer = styled.header`
   display: flex;
   align-items: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1;
+  background-color: ${(props) => props.theme.background};
   justify-content: space-between;
   padding: 0 10rem;
   height: 100px;

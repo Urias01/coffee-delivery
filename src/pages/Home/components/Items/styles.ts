@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { mixins } from '../../../../styles/mixins'
 
 export const ItemsContainer = styled.div`
   margin-top: 3rem;
@@ -11,6 +12,7 @@ export const Item = styled.div`
   display: flex;
   align-items: center;
   gap: 1rem;
+  ${mixins.fonts.textM}
   color: ${(props) => props.theme['base-text']};
 `
 
