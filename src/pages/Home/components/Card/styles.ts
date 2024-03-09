@@ -4,6 +4,7 @@ import { mixins } from '../../../../styles/mixins'
 export const CardContainer = styled.div`
   display: flex;
   flex-direction: column;
+  max-width: 100%;
   border-top-left-radius: 6px;
   border-top-right-radius: 36px;
   border-bottom-left-radius: 36px;
@@ -96,4 +97,8 @@ export const ShoppingCartButton = styled.span`
   background-color: ${(props) => props.theme['purple-dark']};
 
   cursor: pointer;
+
+  &:hover {
+    background-color: ${(props) => props.theme.purple};
+  }
 `

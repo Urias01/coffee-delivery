@@ -6,6 +6,12 @@ export const ItemsContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   grid-template-rows: 80px;
+
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
 `
 
 export const Item = styled.div`

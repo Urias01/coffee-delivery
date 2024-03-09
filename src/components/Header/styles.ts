@@ -11,16 +11,22 @@ export const HeaderContainer = styled.header`
   justify-content: space-between;
   padding: 0 10rem;
   height: 100px;
+
   img {
     width: 85px;
     height: 40px;
+  }
+
+  @media (max-width: 768px) {
+    padding: 0 2rem;
+    gap: 0.5rem;
   }
 `
 
 export const NavContainer = styled.nav`
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 0.5rem;
 `
 
 export const LocationButton = styled.span`
